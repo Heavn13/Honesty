@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@drawable/background"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/bar"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/title">
+        <Button
+            android:id="@+id/bar_cancel"
+            android:text="取消"
+            android:textSize="15sp"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:background="@color/transparant"/>
+
+        <TextView
+            android:id="@+id/bar_title"
+            android:text="说说"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:id="@+id/bar_report"
+            android:text="发表"
+            android:textSize="15sp"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:background="@color/transparant"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_marginTop="50dp"
+        android:padding="10dp"
+        android:hint="说点什么吧..."
+        android:gravity="start"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:ems="10" />
+
+</LinearLayout>

@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@drawable/background">
+
+    <!--顶部导航栏-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/title"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/back"/>
+        <TextView
+            android:text="创建任务"
+            android:paddingRight="50dp"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:scrollbars="none"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/task_name"
+            android:layout_marginTop="20dp"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:hint="任务名称"
+            android:paddingLeft="10dp"
+            android:textSize="15dp"
+            android:singleLine="true"
+            android:maxLength="20"/>
+
+        <EditText
+            android:id="@+id/task_details"
+            android:layout_width="300dp"
+            android:layout_height="100dp"
+            android:lines="3"
+            android:hint="任务简介"
+            android:paddingLeft="10dp"
+            android:textSize="15dp"
+            android:singleLine="true"
+            android:maxLength="30"/>
+
+        <TextView
+            android:id="@+id/task_endDate"
+            android:textSize="15dp"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:hint="任务结束日期"
+            android:paddingLeft="10dp"/>
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/task_beginTime"
+                android:textSize="18sp"
+                android:layout_width="140dp"
+                android:layout_height="40dp"
+                android:paddingLeft="10dp"
+                android:text="00:00"
+                android:gravity="center_vertical"
+                android:hint="打卡开始时间"/>
+            <TextView
+                android:text="To"
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/task_endTime"
+                android:paddingLeft="60dp"
+                android:text="23:59"
+                android:textSize="18sp"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:hint="打卡结束时间"/>
+        </LinearLayout>
+
+        <!--任务最大人数-->
+        <EditText
+            android:id="@+id/task_totalNumber"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:inputType="number"
+            android:hint="任务最大人数"
+            android:paddingLeft="10dp"
+            android:textSize="15dp"
+            android:singleLine="true"
+            android:maxLength="3"/>
+
+        <!--任务可见性-->
+        <RadioGroup
+            android:id="@+id/radioGroupVisibility"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="left"
+            android:paddingLeft="10dp">
+            <RadioButton
+                android:id="@+id/radioButton_public"
+                android:text="公开"
+                android:paddingLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="20dp"/>
+            <RadioButton
+                android:id="@+id/radioButton_private"
+                android:text="私密"
+                android:paddingLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="20dp"/>
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/invite_code"
+            android:layout_gravity="left"
+            android:text="请输入创建的任务的邀请码："
+            android:textSize="12sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"/>
+
+        //数字验证输入框
+        <com.jkb.vcedittext.VerificationCodeEditText
+            android:id="@+id/code"
+            android:inputType="number"
+            app:figures="6"
+            app:selectedBackgroundColor="@color/transparant"
+            app:bottomLineNormalColor="@color/blue"
+            app:bottomLineHeight="2dp"
+            app:bottomLineSelectedColor="@color/white"
+            app:verCodeMargin="5dp"
+            android:layout_width="290dp"
+            android:layout_height="50dp"
+            android:visibility="gone"/>
+
+        <!--任务标签颜色-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textSize="15dp"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:text="任务类型标签："
+                android:paddingLeft="10dp"
+                />
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="4">
+                <RadioButton
+                    android:id="@+id/study"
+                    android:gravity="center_vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:drawableRight="@drawable/study"
+                    android:layout_margin="10dp"/>
+                <RadioButton
+                    android:id="@+id/exercise"
+                    android:gravity="center_vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:drawableRight="@drawable/exercise"
+                    android:layout_margin="10dp"/>
+                <RadioButton
+                    android:id="@+id/habit"
+                    android:gravity="center_vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:drawableRight="@drawable/habit"
+                    android:layout_margin="10dp"/>
+                <RadioButton
+                    android:id="@+id/entertainment"
+                    android:gravity="center_vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:drawableRight="@drawable/entertainment"
+                    android:layout_margin="10dp"/>
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/create"
+                android:layout_marginTop="20dp"
+                android:text="创建任务"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:background="@drawable/button_blue"
+                android:layout_width="300dp"
+                android:layout_height="50dp" />
+
+        </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

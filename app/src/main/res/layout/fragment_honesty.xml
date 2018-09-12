@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical">
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/title"
+        android:weightSum="2">
+        <RadioButton
+            android:id="@+id/radioButton_myTask"
+            android:button="@null"
+            android:gravity="center"
+            android:text="我的任务"
+            android:textSize="15sp"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"/>
+
+        <RadioButton
+            android:id="@+id/radioButton_allTask"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="热门任务"
+            android:textSize="15sp"/>
+    </RadioGroup>
+
+
+    <FrameLayout
+        android:id="@+id/honesty_frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></FrameLayout>
+
+</LinearLayout>

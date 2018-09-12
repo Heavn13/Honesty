@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@drawable/background"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:weightSum="10"
+        android:background="@drawable/title">
+
+        <TextView
+            android:id="@+id/title"
+            android:text="空间主页"
+            android:layout_weight="9"
+            android:gravity="center"
+            android:paddingLeft="50dp"
+            android:textSize="20sp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/back"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:id="@+id/add"
+            android:background="@drawable/add"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@drawable/user_background">
+
+                <com.example.heavn.honesty.Util.CircleImageView
+                    android:id="@+id/head"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="12dp"
+                    android:background="@drawable/nopicture_circle" />
+                <TextView
+                    android:id="@+id/username"
+                    android:text="username"
+                    android:textSize="20sp"
+                    android:gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_alignBottom="@+id/head"
+                    android:layout_toEndOf="@+id/head" />
+            </RelativeLayout>
+            <com.example.heavn.honesty.Util.MyListView
+                android:id="@+id/messageList"
+                android:divider="@null"
+                android:scrollbars="none"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="55dp"
+                android:layout_height="match_parent"></com.example.heavn.honesty.Util.MyListView>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

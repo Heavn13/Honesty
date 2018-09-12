@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:gravity="center_horizontal"
+    android:background="@drawable/background"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:background="@drawable/title">
+        <TextView
+            android:text="个人中心"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/user_background"
+        android:orientation="vertical"
+        android:gravity="center">
+        <com.example.heavn.honesty.Util.CircleImageView
+            android:id="@+id/head"
+            android:layout_marginTop="25dp"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            app:border_color="@color/gray"
+            app:border_width="1dp"
+            android:src="@drawable/nopicture_circle"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/username"
+                android:text="username"
+                android:layout_margin="5dp"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:id="@+id/sex"
+                android:src="@drawable/nosex"
+                android:layout_width="20dp"
+                android:layout_height="20dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/signature"
+            android:text="这个人很懒，没有设置签名。"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:gravity="center">
+        <Button
+            android:id="@+id/manage"
+            android:background="@drawable/ass_manage"
+            android:layout_width="130dp"
+            android:layout_marginRight="50dp"
+            android:layout_height="130dp" />
+
+        <Button
+            android:id="@+id/setting"
+            android:background="@drawable/sys_setting"
+            android:layout_width="130dp"
+            android:layout_height="130dp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/logout"
+        android:text="注销账号"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:background="@drawable/button_blue"
+        android:layout_margin="20dp"
+        android:layout_width="300dp"
+        android:layout_height="50dp" />
+
+
+
+</LinearLayout>
