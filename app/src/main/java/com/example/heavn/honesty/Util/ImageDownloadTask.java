@@ -1,6 +1,7 @@
 package com.example.heavn.honesty.Util;
 
 /**
+ * 图像下载类
  * Created by Administrator on 2017/9/5 0005.
  */
 

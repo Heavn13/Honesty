@@ -4,6 +4,11 @@ import java.util.List;
 
 import cn.bmob.v3.BmobObject;
 
+/**
+ * 说说内容
+ * Created by Administrator on 2018/6/1 0001.
+ */
+
 public class Content extends BmobObject {
     private String content;
     private MyUser author;

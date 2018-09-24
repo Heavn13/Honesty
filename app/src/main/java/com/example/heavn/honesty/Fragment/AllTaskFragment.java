@@ -27,6 +27,7 @@ import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.FindListener;
 
 /**
+ * 所有热门任务的碎片
  * Created by Administrator on 2018/5/31 0031.
  */
 
@@ -97,6 +98,7 @@ public class AllTaskFragment extends Fragment implements AdapterView.OnItemClick
 
     }
 
+    //初始化信息
     private void initView(){
         BmobQuery<Task> query = new BmobQuery<Task>();
         query.order("-currentNumber");

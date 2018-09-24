@@ -25,6 +25,11 @@ import java.util.List;
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.UpdateListener;
 
+/**
+ * 用户详细信息的adapter
+ * Created by Administrator on 2018/6/1 0001.
+ */
+
 public class UserDetailAdapter extends BaseAdapter {
     private Context context;
     private List<Task_User> list;

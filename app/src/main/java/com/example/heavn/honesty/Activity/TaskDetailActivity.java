@@ -1,22 +1,17 @@
 package com.example.heavn.honesty.Activity;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
-import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -43,10 +38,11 @@ import cn.bmob.v3.listener.QueryListener;
 import cn.bmob.v3.listener.UpdateListener;
 
 /**
+ * 任务详情页面
  * Created by Administrator on 2018/6/1 0001.
  */
 public class TaskDetailActivity extends BaseActivity implements View.OnClickListener {
-    private TextView taskName, taskDetials,beginTime,endTime,beginDate,endDate,days,totalNumber,signNumber,currentNumber, viewMoreSignUps, viewMoreMembers;
+    private TextView taskName, taskDetails,beginTime,endTime,beginDate,endDate,days,totalNumber,signNumber,currentNumber, viewMoreSignUps, viewMoreMembers;
     private RecyclerView signUps, members;
     private Button joinOrExit,sign,rank;
     private String taskId,currentId,code,visibility;
@@ -83,7 +79,7 @@ public class TaskDetailActivity extends BaseActivity implements View.OnClickList
         user = MyUser.getCurrentUser(MyUser.class);
 
         taskName = findViewById(R.id.taskName);
-        taskDetials = findViewById(R.id.taskDetails);
+        taskDetails = findViewById(R.id.taskDetails);
         beginTime = findViewById(R.id.task_beginTime);
         endTime = findViewById(R.id.task_endTime);
         beginDate = findViewById(R.id.beginDate);
@@ -254,6 +250,7 @@ public class TaskDetailActivity extends BaseActivity implements View.OnClickList
         }
     }
 
+    //初始化
     private void init(String id){
         enroll = app.isEnroll();
         taskId = app.getTaskId();
@@ -278,7 +275,7 @@ public class TaskDetailActivity extends BaseActivity implements View.OnClickList
                     signs = object.getSigns();
                     index = DateUtil.getIndex(object.getBeginDate());
                     taskName.setText(object.getName());
-                    taskDetials.setText(object.getDetails());
+                    taskDetails.setText(object.getDetails());
                     beginTime.setText(object.getBeginTime());
                     endTime.setText(object.getEndTime());
                     beginDate.setText(object.getBeginDate());

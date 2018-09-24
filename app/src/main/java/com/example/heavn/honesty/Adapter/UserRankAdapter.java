@@ -16,6 +16,11 @@ import com.example.heavn.honesty.Util.MyApp;
 
 import java.util.List;
 
+/**
+ * 用户排名的adapter
+ * Created by Administrator on 2018/6/1 0001.
+ */
+
 public class UserRankAdapter extends BaseAdapter {
     private Context context;
     private List<Task_User> list;

@@ -1,6 +1,7 @@
 package com.example.heavn.honesty.Bean;
 
 /**
+ * 打卡数组
  * Created by Administrator on 2018/6/1 0001.
  */
 

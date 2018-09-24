@@ -1,8 +1,8 @@
 package com.example.heavn.honesty.Bean;
 
-import cn.bmob.v3.BmobObject;
 
 /**
+ * 每天打卡数量
  * Created by Administrator on 2018/6/1 0001.
  */
 

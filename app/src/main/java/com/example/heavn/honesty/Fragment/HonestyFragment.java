@@ -14,6 +14,7 @@ import android.widget.RadioGroup;
 import com.example.heavn.honesty.R;
 
 /**
+ * 诚信状碎片，管理我的任务和热门任务两个碎片
  * Created by Administrator on 2018/5/29 0029.
  */
 

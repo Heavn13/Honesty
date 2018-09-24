@@ -27,6 +27,11 @@ import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.FindListener;
 import cn.bmob.v3.listener.QueryListener;
 
+/**
+ * 更多当日打卡人员页面
+ * Created by Administrator on 2018/6/1 0001.
+ */
+
 public class MoreSignUpsActivity extends BaseActivity implements View.OnClickListener{
     private ImageView back;
     private TextView myCalendar;

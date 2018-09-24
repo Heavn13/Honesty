@@ -25,6 +25,7 @@ import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.FindListener;
 
 /**
+ * 打卡日历的adapter
  * Created by 91905 on 2016/8/24 0024.
  */
 

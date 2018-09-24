@@ -1,5 +1,10 @@
 package com.example.heavn.honesty.Bean;
 
+/**
+ * 说说评论
+ * Created by Administrator on 2018/6/1 0001.
+ */
+
 public class ContentComment {
     private String fromName,toName,comments;
 

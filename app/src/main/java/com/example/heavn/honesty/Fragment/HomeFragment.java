@@ -37,6 +37,7 @@ import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.FindListener;
 
 /**
+ * 主页碎片
  * Created by Administrator on 2018/5/29 0029.
  */
 
@@ -53,6 +54,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
             initView();
         }
     };
+    //刷新，刷新必须套在scrollview外层
     private SwipeRefreshLayout refreshLayout;
     private ScrollView scrollView;
 
@@ -75,6 +77,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         //用线程加载数据
         getActivity().runOnUiThread(runnable);
 
+        //刷新操作
         refreshLayout = view.findViewById(R.id.refresh);
         refreshLayout.setColorSchemeColors(getResources().getColor(R.color.blue));
         refreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
@@ -85,6 +88,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
             }
         });
 
+        //判断scrollview到达顶部的时候才会触发刷新时间
         scrollView = view.findViewById(R.id.scrollView);
         scrollView.getViewTreeObserver().addOnScrollChangedListener(new ViewTreeObserver.OnScrollChangedListener() {
             @Override
@@ -116,6 +120,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 break;
         }
     }
+
+    //初始化信息
     private void initView(){
         MyUser user = MyUser.getCurrentUser(MyUser.class);
         username.setText(user.getUsername());

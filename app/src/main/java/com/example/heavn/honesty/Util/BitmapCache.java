@@ -4,6 +4,12 @@ import android.graphics.Bitmap;
 import android.support.v4.util.LruCache;
 import com.android.volley.toolbox.ImageLoader;
 
+/**
+ * 下载缓存
+ * Created by Administrator on 2018/5/31 0031.
+ */
+
+
 public class BitmapCache implements ImageLoader.ImageCache {
     //内存缓存
     private static LruCache<String, Bitmap> mMemoryCache;

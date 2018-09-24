@@ -5,6 +5,7 @@ import java.util.List;
 import cn.bmob.v3.BmobObject;
 
 /**
+ * 用户的任务，即我的任务
  * Created by Administrator on 2018/6/1 0001.
  */
 

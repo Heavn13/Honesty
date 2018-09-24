@@ -14,6 +14,11 @@ import com.example.heavn.honesty.R;
 
 import cn.bmob.v3.Bmob;
 
+/**
+ * 主界面，管理三个碎片
+ * Created by Administrator on 2018/6/1 0001.
+ */
+
 public class MainActivity extends BaseActivity implements BottomNavigationBar.OnTabSelectedListener{
     private HomeFragment homeFragment;
     private HonestyFragment honestyFragment;
@@ -28,6 +33,7 @@ public class MainActivity extends BaseActivity implements BottomNavigationBar.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //初始化Bmob
         Bmob.initialize(this, "1b783d63f7d627975f1276778ac90c8c");
 
         /**

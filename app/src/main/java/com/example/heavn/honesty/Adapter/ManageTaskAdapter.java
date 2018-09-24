@@ -34,7 +34,10 @@ import cn.bmob.v3.listener.FindListener;
 import cn.bmob.v3.listener.QueryListListener;
 import cn.bmob.v3.listener.QueryListener;
 import cn.bmob.v3.listener.UpdateListener;
-
+/**
+ * 管理任务的adapter
+ * Created by Administrator on 2018/6/1 0001.
+ */
 public class ManageTaskAdapter extends BaseAdapter {
     private Context context;
     private List<Task> list;

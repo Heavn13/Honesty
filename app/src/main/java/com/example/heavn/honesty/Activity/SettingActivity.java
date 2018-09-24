@@ -17,6 +17,11 @@ import java.util.List;
 
 import cn.bmob.v3.BmobUser;
 
+/**
+ * 系统设置页面
+ * Created by Administrator on 2018/6/1 0001.
+ */
+
 public class SettingActivity extends BaseActivity implements View.OnClickListener{
     private ImageView back;
     private ListView listView;

@@ -18,6 +18,7 @@ import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.UpdateListener;
 
 /**
+ * 所有任务的adapter
  * Created by Administrator on 2018/6/1 0001.
  */
 
@@ -68,7 +69,7 @@ public class AllTaskAdapter extends BaseAdapter {
         }
 
         //常规控件赋值
-
+        //判断任务类型
         if(list.get(i).getType().equals("学习")){
             holder.type.setImageResource(R.drawable.study_big);
             holder.label.setBackgroundColor(context.getResources().getColor(R.color.pink));

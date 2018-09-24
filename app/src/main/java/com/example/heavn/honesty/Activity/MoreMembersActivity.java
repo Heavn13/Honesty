@@ -25,6 +25,11 @@ import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.FindListener;
 import cn.bmob.v3.listener.QueryListener;
 
+/**
+ * 更多任务参与者页面
+ * Created by Administrator on 2018/6/1 0001.
+ */
+
 public class MoreMembersActivity extends BaseActivity implements View.OnClickListener{
     private ImageView back;
     private String taskId,currentId;

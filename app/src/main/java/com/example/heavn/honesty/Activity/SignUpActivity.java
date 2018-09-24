@@ -68,6 +68,11 @@ import cn.bmob.v3.listener.QueryListener;
 import cn.bmob.v3.listener.UpdateListener;
 import cn.bmob.v3.listener.UploadFileListener;
 
+/**
+ * 打卡页面
+ * Created by Administrator on 2018/6/1 0001.
+ */
+
 public class SignUpActivity extends BaseActivity implements View.OnClickListener{
     public static final int CHOOSE_PICTURE = 1;
     public static final int SHOW_PICTURE = 2;

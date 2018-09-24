@@ -3,6 +3,10 @@ package com.example.heavn.honesty.Bean;
 import java.util.List;
 import cn.bmob.v3.BmobObject;
 import cn.bmob.v3.datatype.BmobRelation;
+/**
+ * 任务
+ * Created by Administrator on 2018/6/1 0001.
+ */
 
 public class Task extends BmobObject {
     private String name,details,beginDate, endDate,beginTime,endTime,type,code,visibility;

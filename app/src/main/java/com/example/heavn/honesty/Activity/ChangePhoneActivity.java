@@ -22,6 +22,11 @@ import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.QueryListener;
 import cn.bmob.v3.listener.UpdateListener;
 
+/**
+ * 修改绑定的手机号页面
+ * Created by Administrator on 2018/6/1 0001.
+ */
+
 public class ChangePhoneActivity extends BaseActivity implements View.OnClickListener {
     private EditText phone;
     private VerificationCodeEditText code;

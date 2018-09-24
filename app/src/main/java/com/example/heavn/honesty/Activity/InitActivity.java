@@ -7,7 +7,10 @@ import android.os.Handler;
 import android.widget.TextView;
 
 import com.example.heavn.honesty.R;
-
+/**
+ * 启动界面
+ * Created by Administrator on 2018/6/1 0001.
+ */
 
 public class InitActivity extends BaseActivity {
     private TextView count;

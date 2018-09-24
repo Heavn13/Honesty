@@ -17,6 +17,11 @@ import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import com.example.heavn.honesty.R;
 
+/**
+ * 圆形的ImageView
+ * Created by Administrator on 2018/5/31 0031.
+ */
+
 
 
 public class CircleImageView extends ImageView {

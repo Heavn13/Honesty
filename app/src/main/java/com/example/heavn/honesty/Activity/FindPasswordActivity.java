@@ -25,6 +25,11 @@ import cn.bmob.v3.listener.QueryListener;
 import cn.bmob.v3.listener.SaveListener;
 import cn.bmob.v3.listener.UpdateListener;
 
+/**
+ * 找回密码
+ * Created by Administrator on 2018/6/1 0001.
+ */
+
 public class FindPasswordActivity extends BaseActivity implements View.OnClickListener{
     private EditText phone;
     private EditText password;

@@ -26,6 +26,12 @@ import cn.bmob.v3.BmobQuery;
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.QueryListener;
 
+/**
+ * 打卡时间线碎片
+ * Created by Administrator on 2018/5/31 0031.
+ */
+
+
 public class MyTimeLineFragment extends Fragment{
     private ListView listView;
     private MyApp app;
@@ -38,7 +44,7 @@ public class MyTimeLineFragment extends Fragment{
             initView();
         }
     };
-    private SwipeRefreshLayout refreshLayout;
+    private SwipeRefreshLayout refreshLayout;//刷新
 
     @Nullable
     @Override
@@ -50,6 +56,7 @@ public class MyTimeLineFragment extends Fragment{
         app = (MyApp) getActivity().getApplication();
         currentId = app.getCurrentId();
 
+        //刷新操作
         refreshLayout = view.findViewById(R.id.refresh);
         refreshLayout.setColorSchemeColors(getResources().getColor(R.color.blue));
         refreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {

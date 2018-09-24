@@ -36,6 +36,7 @@ import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.SaveListener;
 
 /**
+ * 创建任务页面
  * Created by Administrator on 2018/5/31 0031.
  */
 
@@ -45,11 +46,14 @@ public class CreateTaskActivity extends BaseActivity implements View.OnClickList
     private EditText name,totalNumber;
     private TextView endDate,beginTime,endTime,invite_code,details;
     private VerificationCodeEditText code;
+    //任务的可见性
     private RadioGroup radioGroup,radioGroupVisibility;
     private RadioButton study,radio_public;
     private String type,taskName, beginDate,taskDetails,visibility="公开";
     private int days;
+    //签到人数数组
     private List<Sign> signs = new ArrayList<>();
+    //打卡数组
     private List<SignUp> signUps = new ArrayList<>();
 
     @Override
@@ -142,6 +146,7 @@ public class CreateTaskActivity extends BaseActivity implements View.OnClickList
                     }
                 },23, 59,true).show();
                 break;
+            //创建任务
             case R.id.create:
                 taskName = name.getText().toString();
                 taskDetails = details.getText().toString();
@@ -231,6 +236,7 @@ public class CreateTaskActivity extends BaseActivity implements View.OnClickList
         }
     }
 
+    //任务类型选择
     @Override
     public void onCheckedChanged(RadioGroup group, int checkedId) {
         switch (checkedId){

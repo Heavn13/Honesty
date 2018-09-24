@@ -25,6 +25,7 @@ import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.FindListener;
 
 /**
+ * 我的任务碎片
  * Created by Administrator on 2018/5/31 0031.
  */
 
@@ -78,6 +79,7 @@ public class MyTaskFragment extends Fragment implements View.OnClickListener{
         }
     }
 
+    //初始化信息
     private void initView(){
         BmobQuery<Task_User> query = new BmobQuery<Task_User>();
         MyUser user = MyUser.getCurrentUser(MyUser.class);

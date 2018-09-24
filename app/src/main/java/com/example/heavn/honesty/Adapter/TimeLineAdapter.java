@@ -19,6 +19,11 @@ import com.example.heavn.honesty.Util.MyApp;
 
 import java.util.List;
 
+/**
+ * 打卡时间线的adapter
+ * Created by Administrator on 2018/6/1 0001.
+ */
+
 public class TimeLineAdapter extends BaseAdapter {
     private Context context;
     private List<SignUp> list;

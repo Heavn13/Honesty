@@ -24,6 +24,10 @@ import cn.bmob.v3.Bmob;
 import cn.bmob.v3.BmobUser;
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.LogInListener;
+/**
+ * 登录页面
+ * Created by Administrator on 2018/6/1 0001.
+ */
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener{
     private EditText username;

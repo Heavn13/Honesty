@@ -33,6 +33,10 @@ import cn.bmob.v3.listener.FindListener;
 import cn.bmob.v3.listener.QueryListener;
 import cn.bmob.v3.listener.SaveListener;
 import cn.bmob.v3.listener.UpdateListener;
+/**
+ * 加入任务
+ * Created by Administrator on 2018/6/1 0001.
+ */
 
 public class JoinActivity extends BaseActivity implements View.OnClickListener {
     private ImageView back;

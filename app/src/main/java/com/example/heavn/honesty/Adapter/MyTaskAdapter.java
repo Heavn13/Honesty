@@ -31,6 +31,7 @@ import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.UpdateListener;
 
 /**
+ * 我的任务页面
  * Created by Administrator on 2018/6/1 0001.
  */
 
@@ -99,6 +100,7 @@ public class MyTaskAdapter extends BaseAdapter{
         }
 
         //常规控件赋值
+        //任务类型判断
         if(list.get(i).getTask().getType().equals("学习")){
             holder.type.setImageResource(R.drawable.study_big);
             holder.label.setBackgroundColor(context.getResources().getColor(R.color.pink));
@@ -216,6 +218,7 @@ public class MyTaskAdapter extends BaseAdapter{
         List<Sign> signs = new ArrayList<>();//每个任务的签到数组
     }
 
+    //自定义监听器，我的任务底下的四个按钮的点击事件
     private class MyListener implements View.OnClickListener{
         int position;
         public MyListener(int position) {

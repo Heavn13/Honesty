@@ -17,6 +17,10 @@ import java.util.List;
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.UpdateListener;
 
+/**
+ * 用户评论列表的adapter
+ * Created by Administrator on 2018/6/1 0001.
+ */
 public class CommentListAdapter extends BaseAdapter {
     private Context context;
     private List<ContentComment> list;

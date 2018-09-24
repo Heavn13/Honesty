@@ -22,6 +22,11 @@ import java.util.TimerTask;
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.SaveListener;
 
+/**
+ * 写说说页面
+ * Created by Administrator on 2018/6/1 0001.
+ */
+
 public class WriterActivity extends BaseActivity implements View.OnClickListener{
     private Button bar_cancel;
     private Button bar_report;

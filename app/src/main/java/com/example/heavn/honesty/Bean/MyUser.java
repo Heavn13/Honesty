@@ -2,6 +2,11 @@ package com.example.heavn.honesty.Bean;
 
 import cn.bmob.v3.BmobUser;
 
+/**
+ * 用户对象
+ * Created by Administrator on 2018/6/1 0001.
+ */
+
 public class MyUser extends BmobUser {
     private String avater,sex,location,birthday,school,signature;
 

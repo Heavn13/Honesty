@@ -24,6 +24,7 @@ import cn.bmob.v3.listener.QueryListener;
 import cn.bmob.v3.listener.SaveListener;
 
 /**
+ * 注册页面
  * Created by Administrator on 2018/5/30 0030.
  */
 

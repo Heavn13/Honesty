@@ -10,8 +10,8 @@ import com.android.volley.toolbox.Volley;
  */
 
 public class MyApp extends Application{
-    private String taskId,currentId,userId;
-    private boolean enroll;
+    private String taskId,currentId,userId;//任务id，当前用户的任务id，用户id
+    private boolean enroll;//是否加入
     public static RequestQueue queue;
     @Override
     public final void onCreate() {

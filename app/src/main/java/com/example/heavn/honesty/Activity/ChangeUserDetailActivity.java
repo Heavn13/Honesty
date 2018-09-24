@@ -50,6 +50,11 @@ import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.UpdateListener;
 import cn.bmob.v3.listener.UploadFileListener;
 
+/**
+ * 修改个人信息页面
+ * Created by Administrator on 2018/6/1 0001.
+ */
+
 public class ChangeUserDetailActivity extends BaseActivity implements View.OnClickListener,RadioGroup.OnCheckedChangeListener {
     public static final int CHOOSE_PICTURE = 1;
     public static final int SHOW_PICTURE = 2;
@@ -143,6 +148,7 @@ public class ChangeUserDetailActivity extends BaseActivity implements View.OnCli
                     newUser.setLocation(s_location);
                     newUser.setSchool(s_school);
                     newUser.setSignature(s_signature);
+                    //BmobUser中的username字段不能重复
                     MyUser user = MyUser.getCurrentUser(MyUser.class);
                     newUser.update(user.getObjectId(),new UpdateListener() {
                         @Override
@@ -184,6 +190,7 @@ public class ChangeUserDetailActivity extends BaseActivity implements View.OnCli
                     }
                 }, c.get(Calendar.YEAR), c.get(Calendar.MONTH), c.get(Calendar.DAY_OF_MONTH)).show();
                 break;
+                //拍照
             case R.id.take_photo:
                 proveImage = new File(Environment.getExternalStorageDirectory(),"proveImage.jpg");
                 try{
@@ -204,6 +211,7 @@ public class ChangeUserDetailActivity extends BaseActivity implements View.OnCli
                 intent.putExtra(MediaStore.EXTRA_OUTPUT,imageUri);
                 startActivityForResult(intent,SHOW_PICTURE);
                 break;
+                //从相册选择
             case R.id.choose_albums:
                 proveImage = new File(Environment.getExternalStorageDirectory(),"proveImage.jpg");
                 try{

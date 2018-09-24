@@ -28,6 +28,11 @@ import cn.bmob.v3.BmobQuery;
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.QueryListener;
 
+/**
+ * 打卡详情管理页面，管理日历和时间线两个碎片
+ * Created by Administrator on 2018/6/1 0001.
+ */
+
 public class CalendarActivity extends BaseActivity implements View.OnClickListener {
     private ImageView back,change;
     private MyCalendarFragment myCalendarFragment;

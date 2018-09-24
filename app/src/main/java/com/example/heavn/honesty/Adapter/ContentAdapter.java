@@ -37,6 +37,11 @@ import java.util.List;
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.UpdateListener;
 
+/**
+ * 说说内容的adapter
+ * Created by Administrator on 2018/6/1 0001.
+ */
+
 public class ContentAdapter extends BaseAdapter {
     private Context context;
     private List<Content> list;
@@ -146,6 +151,7 @@ public class ContentAdapter extends BaseAdapter {
         TextView edit_comment;//评论编辑框
     }
 
+    //自定义监听器，包括查看用户详情，点赞评论等功能
     private class MyListener implements View.OnClickListener{
         int position;
         public MyListener(int position) {
@@ -207,6 +213,7 @@ public class ContentAdapter extends BaseAdapter {
         }
     }
 
+    //点击每个评论的点击事件，弹出框
     private class MyItemListener implements AdapterView.OnItemClickListener{
         int position;
         ViewHolder holder;

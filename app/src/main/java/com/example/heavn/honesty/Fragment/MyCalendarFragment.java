@@ -29,6 +29,11 @@ import cn.bmob.v3.BmobQuery;
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.QueryListener;
 
+/**
+ * 打卡日历碎片
+ * Created by Administrator on 2018/6/1 0001.
+ */
+
 public class MyCalendarFragment extends Fragment implements View.OnClickListener {
     private GridView gridView;//定义gridView
     private MyCalendarAdapter myCalendarAdapter;//定义adapter
@@ -86,11 +91,13 @@ public class MyCalendarFragment extends Fragment implements View.OnClickListener
         }
     }
 
+    //初始化当前年月
     private void initData() {
         year = DateUtil.getYear();
         month = DateUtil.getMonth();
     }
 
+    //初始化日历
     private void initView() {
         if(currentId != null && !currentId.equals("")){
             //初始化信息

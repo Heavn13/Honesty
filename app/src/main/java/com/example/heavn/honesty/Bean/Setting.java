@@ -1,5 +1,10 @@
 package com.example.heavn.honesty.Bean;
 
+/**
+ * 设置
+ * Created by Administrator on 2018/6/1 0001.
+ */
+
 public class Setting {
     private int image,enter;
     private String title;
