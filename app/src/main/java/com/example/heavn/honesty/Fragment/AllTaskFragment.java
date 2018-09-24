@@ -4,6 +4,7 @@ import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,6 +35,7 @@ public class AllTaskFragment extends Fragment implements AdapterView.OnItemClick
     private AllTaskAdapter adapter;
     private MyApp app;
     private List<Task> tasks = new ArrayList<>();
+    private SwipeRefreshLayout refreshLayout;
     private Runnable runnable = new Runnable() {
         @Override
         public void run() {
@@ -52,14 +54,19 @@ public class AllTaskFragment extends Fragment implements AdapterView.OnItemClick
         //用线程加载数据
         new Thread(runnable).start();
 
+        refreshLayout = view.findViewById(R.id.refresh);
+        refreshLayout.setColorSchemeColors(getResources().getColor(R.color.blue));
+        refreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                initView();
+                refreshLayout.setRefreshing(false);
+            }
+        });
+
         return view;
     }
 
-    @Override
-    public void onResume() {
-        super.onResume();
-        initView();
-    }
 
     //listView的单个点击事件
     @Override

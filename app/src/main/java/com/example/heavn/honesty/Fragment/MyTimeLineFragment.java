@@ -4,6 +4,7 @@ import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -37,6 +38,7 @@ public class MyTimeLineFragment extends Fragment{
             initView();
         }
     };
+    private SwipeRefreshLayout refreshLayout;
 
     @Nullable
     @Override
@@ -47,6 +49,16 @@ public class MyTimeLineFragment extends Fragment{
 
         app = (MyApp) getActivity().getApplication();
         currentId = app.getCurrentId();
+
+        refreshLayout = view.findViewById(R.id.refresh);
+        refreshLayout.setColorSchemeColors(getResources().getColor(R.color.blue));
+        refreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                initView();
+                refreshLayout.setRefreshing(false);
+            }
+        });
 
         //用线程加载数据
         new Thread(runnable).start();

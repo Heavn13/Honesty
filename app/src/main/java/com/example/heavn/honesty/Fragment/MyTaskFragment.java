@@ -4,6 +4,7 @@ import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,6 +38,7 @@ public class MyTaskFragment extends Fragment implements View.OnClickListener{
             initView();
         }
     };
+    private SwipeRefreshLayout refreshLayout;
 
 
     @Nullable
@@ -47,17 +49,22 @@ public class MyTaskFragment extends Fragment implements View.OnClickListener{
         create.setOnClickListener(this);
         listView = view.findViewById(R.id.mylist);
 
+        refreshLayout = view.findViewById(R.id.refresh);
+        refreshLayout.setColorSchemeColors(getResources().getColor(R.color.blue));
+        refreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                initView();
+                refreshLayout.setRefreshing(false);
+            }
+        });
+
         //用线程加载数据
         new Thread(runnable).start();
 
         return view;
     }
 
-    @Override
-    public void onResume() {
-        super.onResume();
-        initView();
-    }
 
     @Override
     public void onClick(View v) {

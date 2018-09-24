@@ -5,12 +5,15 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewTreeObserver;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -50,6 +53,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
             initView();
         }
     };
+    private SwipeRefreshLayout refreshLayout;
+    private ScrollView scrollView;
 
     @Nullable
     @Override
@@ -70,14 +75,27 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         //用线程加载数据
         getActivity().runOnUiThread(runnable);
 
-        return view;
-    }
+        refreshLayout = view.findViewById(R.id.refresh);
+        refreshLayout.setColorSchemeColors(getResources().getColor(R.color.blue));
+        refreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                initView();
+                refreshLayout.setRefreshing(false);
+            }
+        });
 
-    @Override
-    public void onResume() {
-        super.onResume();
-        //用线程加载数据
-        getActivity().runOnUiThread(runnable);
+        scrollView = view.findViewById(R.id.scrollView);
+        scrollView.getViewTreeObserver().addOnScrollChangedListener(new ViewTreeObserver.OnScrollChangedListener() {
+            @Override
+            public void onScrollChanged() {
+                if (refreshLayout != null) {
+                    refreshLayout.setEnabled(scrollView.getScrollY() == 0);
+                }
+            }
+        });
+
+        return view;
     }
 
     @Override
